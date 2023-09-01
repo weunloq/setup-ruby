@@ -15,6 +15,7 @@ runs:
         node-version-file: '.nvmrc'
     - name: Find yarn cache location
       id: yarn-cache
+      shell: bash
       run: echo "{name}={value}" >> $GITHUB_OUTPUT
     - name: JS package cache
       uses: actions/cache@v3
@@ -30,6 +31,7 @@ runs:
         restore-keys: |
           ${{ runner.os }}-gems-
     - name: Install packages
+      shell: bash
       run: |
         yarn install --pure-lockfile
         yarn build:css
