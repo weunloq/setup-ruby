@@ -15,6 +15,9 @@ runs:
         node-version-file: '.nvmrc'
         cache: 'yarn'
     - name: Install packages
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       shell: bash
       run: |
         yarn install --pure-lockfile
