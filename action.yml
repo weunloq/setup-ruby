@@ -12,7 +12,7 @@ runs:
     - name: Setup SSH
       uses: webfactory/ssh-agent@v0.7.0
       with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-private-key: '${{ secrets.SSH_PRIVATE_KEY }}'
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
