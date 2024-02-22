@@ -16,9 +16,9 @@ runs:
         cache: 'yarn'
     - name: Install packages
       shell: bash
+      env:
+        PUPPETEER_SKIP_DOWNLOAD: true
       run: |
-        yarn add puppeteer@21.4.1 --ignore-scripts puppeteer
-        yarn add puppeteer-core@21.11.0
         yarn install --pure-lockfile
         yarn build:css
         yarn build:js
