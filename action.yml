@@ -17,7 +17,7 @@ runs:
     - name: Install packages
       shell: bash
       run: |
-        yarn add puppeteer --ignore-scripts puppeteer
+        yarn add puppeteer@21.4.1 --ignore-scripts puppeteer
         yarn install --pure-lockfile
         yarn build:css
         yarn build:js
