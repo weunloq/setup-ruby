@@ -16,8 +16,6 @@ runs:
         cache: 'yarn'
     - name: Install packages
       shell: bash
-      env:
-        PUPPETEER_SKIP_DOWNLOAD: true
       run: |
         yarn install --pure-lockfile
         yarn build:css
